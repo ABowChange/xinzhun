@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="zyj.biyesheji0425.mapper.BluetoothMapper" >
+  <resultMap id="BaseResultMap" type="zyj.biyesheji0425.pojo.Bluetooth" >
+    <id column="bluetooth_id" property="bluetoothId" jdbcType="VARCHAR" />
+    <result column="person_id" property="personId" jdbcType="VARCHAR" />
+    <result column="bluetooth_state" property="bluetoothState" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    bluetooth_id, person_id, bluetooth_state
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from bluetooth
+    where bluetooth_id = #{bluetoothId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from bluetooth
+    where bluetooth_id = #{bluetoothId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="zyj.biyesheji0425.pojo.Bluetooth" >
+    insert into bluetooth (bluetooth_id, person_id, bluetooth_state
+      )
+    values (#{bluetoothId,jdbcType=VARCHAR}, #{personId,jdbcType=VARCHAR}, #{bluetoothState,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="zyj.biyesheji0425.pojo.Bluetooth" >
+    insert into bluetooth
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="bluetoothId != null" >
+        bluetooth_id,
+      </if>
+      <if test="personId != null" >
+        person_id,
+      </if>
+      <if test="bluetoothState != null" >
+        bluetooth_state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="bluetoothId != null" >
+        #{bluetoothId,jdbcType=VARCHAR},
+      </if>
+      <if test="personId != null" >
+        #{personId,jdbcType=VARCHAR},
+      </if>
+      <if test="bluetoothState != null" >
+        #{bluetoothState,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="zyj.biyesheji0425.pojo.Bluetooth" >
+    update bluetooth
+    <set >
+      <if test="personId != null" >
+        person_id = #{personId,jdbcType=VARCHAR},
+      </if>
+      <if test="bluetoothState != null" >
+        bluetooth_state = #{bluetoothState,jdbcType=INTEGER},
+      </if>
+    </set>
+    where bluetooth_id = #{bluetoothId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="zyj.biyesheji0425.pojo.Bluetooth" >
+    update bluetooth
+    set person_id = #{personId,jdbcType=VARCHAR},
+      bluetooth_state = #{bluetoothState,jdbcType=INTEGER}
+    where bluetooth_id = #{bluetoothId,jdbcType=VARCHAR}
+  </update>
+</mapper>

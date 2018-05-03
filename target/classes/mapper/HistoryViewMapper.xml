@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="zyj.biyesheji0425.mapper.HistoryViewMapper" >
+  <resultMap id="BaseResultMap" type="zyj.biyesheji0425.pojo.HistoryView" >
+    <id column="person_id" property="personId" jdbcType="VARCHAR" />
+    <id column="date" property="date" jdbcType="TIMESTAMP" />
+    <result column="person_x" property="personX" jdbcType="REAL" />
+    <result column="person_y" property="personY" jdbcType="REAL" />
+    <result column="room_id" property="roomId" jdbcType="VARCHAR" />
+    <result column="person_name" property="personName" jdbcType="VARCHAR" />
+  </resultMap>
+  <select id="selectAllTrack" resultMap="BaseResultMap" >
+    select
+    h.person_id, h.date, h.person_x, h.person_y, h.room_id,p.person_name
+    from history h, person p
+    where
+    h.person_id = p.person_id
+  </select>
+  <select id="trackBypersonId" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select
+    h.person_id, h.date, h.person_x, h.person_y, h.room_id,p.person_name
+    from history h, person p
+    where
+    h.person_id = p.person_id and  h.person_id = #{personId,jdbcType=VARCHAR}
+  </select>
+
+</mapper>

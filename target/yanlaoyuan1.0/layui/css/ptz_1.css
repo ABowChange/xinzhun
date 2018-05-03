@@ -1,0 +1,301 @@
+@charset "utf-8";
+
+.ptztabs { width: 196px; height: 24px; border-bottom: 1px solid rgb(194, 194, 194); }
+
+.ptztabs li { float: left; list-style-type: none; margin-right: 3px; border-bottom: none; }
+
+.ptztabs span { float: left; display: block; text-decoration: none; border: 0px; height: 25px; width: 38px; position: relative; outline: none; cursor: pointer; }
+
+.ptztabs span.current { cursor: default; }
+
+.ptzpanes { display: none; border-style: solid; border-color: rgb(194, 194, 194); border-image: initial; border-width: 0px 1px 1px; height: 458px; width: 194px; background-color: rgb(255, 255, 255); overflow-y: auto; overflow-x: hidden; }
+
+.ptztabs .tab1 span { background: url("../images/ptz/nor/preset.gif") 0px 0px no-repeat; }
+
+.ptztabs .tab1 span.current { background: url("../images/ptz/sel/preset.gif") 0px 0px no-repeat; }
+
+.ptztabs .tab2 span { background: url("../images/ptz/nor/track.gif") 0px 0px no-repeat; }
+
+.ptztabs .tab2 span.current { background: url("../images/ptz/sel/track.gif") 0px 0px no-repeat; }
+
+.ptztabs .tab3 span { background: url("../images/ptz/nor/cruise.gif") 0px 0px no-repeat; }
+
+.ptztabs .tab3 span.current { background: url("../images/ptz/sel/cruise.gif") 0px 0px no-repeat; }
+
+#_PresetArea div { border-bottom: 1px solid rgb(201, 201, 201); cursor: pointer; height: 29px; line-height: 29px; }
+
+#_PresetArea div span { display: inline-block; float: left; }
+
+#_PresetArea div span.presetnum { margin-left: 5px; width: 25px; }
+
+#_PresetArea div span.presetname { width: 68px; margin: 0px 5px; overflow: hidden; cursor: pointer; white-space: nowrap; text-overflow: ellipsis; }
+
+#_PresetArea div.select { background-color: rgb(118, 39, 39); color: rgb(255, 255, 255); vertical-align: middle; cursor: default; }
+
+#_PresetArea div.enter { background-color: rgb(251, 251, 194); }
+
+#_PresetArea .gotoPreset { background: url("../images/ptz/nor/gotoPreset.gif") 0px 0px no-repeat; width: 16px; height: 16px; cursor: pointer; margin: 5px 0px 0px; }
+
+#_PresetArea .setPreset { background: url("../images/ptz/nor/edit.gif") 0px 0px no-repeat; width: 16px; height: 16px; cursor: pointer; margin: 5px 0px 0px 5px; }
+
+#_PresetArea .cleanPreset { background: url("../images/ptz/nor/clean.gif") 0px 0px no-repeat; width: 16px; height: 16px; cursor: pointer; margin: 5px 0px 0px 5px; }
+
+#_CruiseArea .head { width: 194px; height: 26px; }
+
+#_CruiseArea .foot { height: 30px; background-color: rgb(200, 200, 200); }
+
+#_CruiseArea .add { background: url("../images/ptz/add.gif") 0px 0px no-repeat; width: 12px; height: 12px; cursor: pointer; margin: 9px 0px 9px 5px; }
+
+#_CruiseArea .delete { background: url("../images/ptz/nor/delete.gif") 0px 0px no-repeat; width: 12px; height: 12px; cursor: pointer; margin: 8px 0px 9px 5px; }
+
+#_CruiseArea .edit { background: url("../images/ptz/set.gif") 0px 0px no-repeat; width: 12px; height: 12px; cursor: pointer; margin: 8px 0px 9px; }
+
+#_CruiseArea .start { background: url("../images/ptz/start.gif") 0px 0px no-repeat; width: 16px; height: 16px; cursor: pointer; margin: 5px 0px 0px 3px; }
+
+#_CruiseArea .stop { background: url("../images/ptz/stop.gif") 0px 0px no-repeat; width: 16px; height: 16px; cursor: pointer; margin: 5px 0px 0px 4px; }
+
+#_CruiseArea .save { background: url("../images/ptz/save.gif") 0px 0px no-repeat; width: 16px; height: 16px; cursor: pointer; margin: 5px 0px 0px 4px; }
+
+#_CruiseArea .head .delete { background: url("../images/ptz/nor/deletePatrol.gif") 0px 0px no-repeat; width: 16px; height: 16px; cursor: pointer; margin: 5px 0px 0px 4px; }
+
+#_selectPatrol { width: 100px; }
+
+#_PatrolPresetList { height: 438px; overflow-y: auto; }
+
+#_PatrolPresetList div { border-bottom: 1px solid rgb(201, 201, 201); cursor: pointer; height: 29px; }
+
+#_PatrolPresetList div span { margin: 5px 3px 0px; float: left; }
+
+#_PatrolPresetList div span.firstchild { width: 12px; height: 12px; margin: 8px 0px 9px 5px; }
+
+#_PatrolPresetList div span.secondchild { width: 18px; }
+
+#_PatrolPresetList div span.thirdchild { width: 60px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+#_PatrolPresetList div span.fouthchild { width: 30px; }
+
+#_PatrolPresetList div.select { background-color: rgb(118, 39, 39); color: rgb(255, 255, 255); cursor: default; }
+
+#_PatrolPresetList .select .delete { background: url("../images/ptz/nor/delete.gif") 0px 0px no-repeat; width: 12px; height: 12px; cursor: pointer; margin: 8px 0px 9px 5px; }
+
+#_PatrolPresetList div.enter { background-color: rgb(251, 251, 194); }
+
+#_TrackArea div { border-bottom: 1px solid rgb(201, 201, 201); font-family: Arial; font-size: 14px; cursor: pointer; height: 29px; }
+
+#_TrackArea div span { display: inline-block; }
+
+#_TrackArea div span.firstchild { margin: 8px 10px 8px 15px; }
+
+#_TrackArea div.select { background-color: rgb(118, 39, 39); color: rgb(255, 255, 255); cursor: default; }
+
+#_TrackArea div.enter { background-color: rgb(251, 251, 194); }
+
+#_TrackArea .start { background: url("../images/ptz/nor/start.gif") 0px 0px no-repeat; width: 16px; height: 16px; cursor: pointer; margin: 5px 0px 0px 5px; }
+
+#_TrackArea .stop { background: url("../images/ptz/nor/stop.gif") 0px 0px no-repeat; width: 16px; height: 16px; cursor: pointer; margin: 5px 0px 0px 5px; }
+
+#_TrackArea .startSave { background: url("../images/ptz/nor/edit.gif") 0px 0px no-repeat; width: 16px; height: 16px; cursor: pointer; margin: 5px 0px 0px 5px; }
+
+#_TrackArea .stopSave { background: url("../images/ptz/nor/save.gif") 0px 0px no-repeat; width: 16px; height: 16px; cursor: pointer; margin: 5px 0px 0px 5px; }
+
+#_TrackArea .delete { background: url("../images/ptz/nor/clean.gif") 0px 0px no-repeat; width: 16px; height: 16px; cursor: pointer; margin: 5px 0px 0px 5px; }
+
+#_ptz { width: 196px; border: 1px solid rgb(196, 196, 196); background-color: rgb(224, 224, 224); padding: 10px; margin: 0px 0px 5px; }
+
+.contentright span { display: inline-block; }
+
+.ptzOpe { height: 88px; margin-bottom: 2px; }
+
+.ptzDir { background: url("../images/ptz/ptzDir.gif") 0px 0px no-repeat; width: 94px; height: 88px; }
+
+.ptzDir div { width: 94px; height: 29px; }
+
+.ptzDir span { cursor: pointer; }
+
+#_leftup { background: url("../images/ptz/nor/leftup.gif") 50% 50% no-repeat; width: 31px; height: 30px; }
+
+#_leftup.sel { background: url("../images/ptz/sel/leftup.gif") 50% 50% no-repeat; }
+
+#_up { background: url("../images/ptz/nor/up.gif") 50% 50% no-repeat; width: 34px; height: 30px; }
+
+#_up.sel { background: url("../images/ptz/sel/up.gif") 50% 50% no-repeat; }
+
+#_rightup { background: url("../images/ptz/nor/rightup.gif") 50% 50% no-repeat; width: 29px; height: 30px; }
+
+#_rightup.sel { background: url("../images/ptz/sel/rightup.gif") 50% 50% no-repeat; }
+
+#_left { background: url("../images/ptz/nor/left.gif") 50% 65% no-repeat; width: 31px; height: 29px; }
+
+#_left.sel { background: url("../images/ptz/sel/left.gif") 50% 65% no-repeat; }
+
+#_auto { background: url("../images/ptz/nor/auto.gif") 55% 80% no-repeat; width: 34px; height: 29px; }
+
+#_auto.sel { background: url("../images/ptz/sel/auto.gif") 55% 80% no-repeat; }
+
+#_right { background: url("../images/ptz/nor/right.gif") 50% 65% no-repeat; width: 29px; height: 29px; }
+
+#_right.sel { background: url("../images/ptz/sel/right.gif") 50% 65% no-repeat; }
+
+#_leftdown { background: url("../images/ptz/nor/leftdown.gif") 35% 60% no-repeat; width: 31px; height: 29px; }
+
+#_leftdown.sel { background: url("../images/ptz/sel/leftdown.gif") 35% 60% no-repeat; }
+
+#_down { background: url("../images/ptz/nor/down.gif") 50% 60% no-repeat; width: 34px; height: 29px; }
+
+#_down.sel { background: url("../images/ptz/sel/down.gif") 50% 60% no-repeat; }
+
+#_rightdown { background: url("../images/ptz/nor/rightdown.gif") 65% 60% no-repeat; width: 29px; height: 29px; }
+
+#_rightdown.sel { background: url("../images/ptz/sel/rightdown.gif") 65% 60% no-repeat; }
+
+.ptzDis { height: 88px; width: 96px; margin-left: 3px; }
+
+.ptzDis div { border: 0px; height: 29px; }
+
+.ptzBtnLeft { width: 3px; height: 29px; background: url("../images/ptz/ptzBtnLeft.gif") 0px 0px no-repeat; }
+
+.ptzBtnMid { width: 90px; height: 29px; background: url("../images/ptz/ptzBtnMid.gif") 0px 0px repeat-x; }
+
+.ptzBtnMid span { cursor: pointer; }
+
+.ptzBtnRight { width: 3px; height: 29px; background: url("../images/ptz/ptzBtnRight.gif") 0px 0px no-repeat; }
+
+#_ptzBar { width: 218px; height: 29px; margin: 0px 0px 5px; position: relative; cursor: pointer; }
+
+#_videoBar { width: 218px; height: 29px; margin: 5px 0px; position: relative; display: none; }
+
+.barLeft { width: 4px; height: 29px; background: url("../images/ptz/nor/ptzBarLeft.gif") 0px 0px no-repeat; float: left; }
+
+.barMid { width: 210px; height: 29px; background: url("../images/ptz/nor/ptzBarMid.gif") 0px 0px repeat-x; float: left; }
+
+.barMid div { width: 200px; height: 23px; padding: 6px 0px 0px 10px; }
+
+.barMid #_directionIcon { width: 8px; height: 8px; float: right; margin: 5px 5px 0px 0px; background: url("../images/ptz/direction_down.gif") right center no-repeat; }
+
+.barMid #_directionIcon.collapsed { background: url("../images/ptz/direction_up.gif") right center no-repeat; }
+
+.barRight { width: 4px; height: 29px; background: url("../images/ptz/nor/ptzBarRight.gif") right center no-repeat; float: left; }
+
+#_zoomIn { background: url("../images/ptz/nor/zoomIn.gif") 0px 0px no-repeat; width: 21px; height: 18px; margin: 5px 11px 6px 12px; }
+
+#_zoomIn.sel { background: url("../images/ptz/sel/zoomIn.gif") 0px 0px no-repeat; }
+
+#_zoomOut { background: url("../images/ptz/nor/zoomOut.gif") 0px 0px no-repeat; width: 21px; height: 18px; margin: 5px 11px 6px 12px; }
+
+#_zoomOut.sel { background: url("../images/ptz/sel/zoomOut.gif") 0px 0px no-repeat; }
+
+#_focusIn { background: url("../images/ptz/nor/focusIn.gif") 0px 0px no-repeat; width: 21px; height: 18px; margin: 5px 11px 6px 12px; }
+
+#_focusIn.sel { background: url("../images/ptz/sel/focusIn.gif") 0px 0px no-repeat; }
+
+#_focusOut { background: url("../images/ptz/nor/focusOut.gif") 0px 0px no-repeat; width: 21px; height: 18px; margin: 5px 11px 6px 12px; }
+
+#_focusOut.sel { background: url("../images/ptz/sel/focusOut.gif") 0px 0px no-repeat; }
+
+#_irisIn { background: url("../images/ptz/nor/irisIn.gif") 0px 0px no-repeat; width: 21px; height: 18px; margin: 5px 11px 6px 12px; }
+
+#_irisIn.sel { background: url("../images/ptz/sel/irisIn.gif") 0px 0px no-repeat; }
+
+#_irisOut { background: url("../images/ptz/nor/irisOut.gif") 0px 0px no-repeat; width: 21px; height: 18px; margin: 5px 11px 6px 12px; }
+
+#_irisOut.sel { background: url("../images/ptz/sel/irisOut.gif") 0px 0px no-repeat; }
+
+.ptzSpeed { height: 20px; margin-top: 3px; }
+
+.speedAdd { width: 18px; height: 18px; cursor: pointer; background: url("../images/ptz/speed_add.gif") 0px 0px no-repeat; }
+
+.speedAddon { width: 18px; height: 18px; cursor: pointer; background: url("../images/ptz/speed_add_sel.gif") 0px 0px no-repeat; }
+
+.speedReduce { width: 18px; height: 18px; cursor: pointer; background: url("../images/ptz/speed_reduce.gif") 0px 0px no-repeat; }
+
+.speedReduceon { width: 18px; height: 18px; cursor: pointer; background: url("../images/ptz/speed_reduce_sel.gif") 0px 0px no-repeat; }
+
+.sliderBar { width: 157px; height: 18px; }
+
+.sliderBar div { float: left; }
+
+.ptzAid { height: 29px; width: 196px; margin: 2px 0px 4px; }
+
+.ptzAidBg { width: 190px; height: 29px; background: url("../images/ptz/ptzBtnMid.gif") 0px 0px repeat-x; }
+
+.ptzAidBg span { cursor: pointer; }
+
+#_light { background: url("../images/ptz/nor/light.gif") 0px 0px no-repeat; width: 21px; height: 18px; margin: 5px 12px 6px 13px; }
+
+#_light.sel { background: url("../images/ptz/sel/light.gif") 0px 0px no-repeat; }
+
+#_light.act { background: url("../images/ptz/lightAct.gif") 0px 0px no-repeat; }
+
+#_rain { background: url("../images/ptz/nor/rain.gif") 0px 0px no-repeat; width: 21px; height: 18px; margin: 5px 12px 6px 13px; }
+
+#_rain.sel { background: url("../images/ptz/sel/rain.gif") 0px 0px no-repeat; }
+
+#_rain.act { background: url("../images/ptz/rainAct.gif") 0px 0px no-repeat; }
+
+#_oneKeyFocus { background: url("../images/ptz/nor/oneKeyFocus.gif") 0px 0px no-repeat; width: 21px; height: 18px; margin: 5px 12px 6px 13px; }
+
+#_oneKeyFocus.sel { background: url("../images/ptz/sel/oneKeyFocus.gif") 0px 0px no-repeat; }
+
+#_initCamera { background: url("../images/ptz/nor/initCamera.gif") 0px 0px no-repeat; width: 21px; height: 18px; margin: 5px 12px 6px 13px; }
+
+#_initCamera.sel { background: url("../images/ptz/sel/initCamera.gif") 0px 0px no-repeat; }
+
+span.vLine { background-color: rgb(199, 199, 199); width: 1px; height: 20px; margin: 4px 0px 5px 1px; cursor: default; }
+
+.speedSlider { height: 18px; width: 157px; background: url("../images/ptz/slider_bar.gif") no-repeat; }
+
+.speedBar { height: 18px; width: 13px; background: url("../images/ptz/slider_speed.gif") no-repeat; }
+
+.frameTopLeft { height: 26px; width: 10px; background: url("../images/public/PatrolFrame/topleft.gif") left top no-repeat; float: left; }
+
+.frameTopMid { height: 26px; width: 178px; background: url("../images/public/PatrolFrame/topmid.gif") center top repeat-x; float: left; text-align: center; }
+
+.frameTopMid label { display: inline-block; margin-top: 4px; }
+
+.frameTopRight { height: 26px; width: 10px; background: url("../images/public/PatrolFrame/topright.gif") right top no-repeat; float: left; }
+
+.frameCenLeft { width: 10px; height: 180px; background: url("../images/public/PatrolFrame/midleft.gif") left center repeat-y; float: left; }
+
+.frameCenMid { width: 178px; height: 180px; background-color: rgb(215, 215, 215); float: left; }
+
+.frameCenRight { width: 10px; height: 180px; background: url("../images/public/PatrolFrame/midright.gif") right center repeat-y; float: left; }
+
+.frameBotLeft { height: 26px; width: 10px; background: url("../images/public/PatrolFrame/bottomleft.gif") left bottom no-repeat; float: left; }
+
+.frameBotMid { height: 26px; width: 178px; background: url("../images/public/PatrolFrame/bottommid.gif") center bottom repeat-x; float: left; }
+
+.frameBotRight { height: 26px; width: 10px; background: url("../images/public/PatrolFrame/bottomright.gif") right bottom no-repeat; float: left; }
+
+#_EditPatrolPreset { width: 198px; height: 232px; display: none; position: absolute; z-index: 10000; }
+
+#_EditPatrolPreset span { display: inline-block; }
+
+#_EditPatrolPreset .elm { color: rgb(0, 0, 0); height: 45px; width: 178px; }
+
+#_EditPatrolPreset .elm .left { width: 80px; }
+
+#_EditPatrolPreset .elm .right { width: 98px; }
+
+#_EditPatrolPreset .elm .right * { width: 98px; }
+
+#_EditVoiceTalk { width: 198px; height: 162px; display: none; position: absolute; z-index: 10000; }
+
+#_EditVoiceTalk .elm { color: rgb(0, 0, 0); height: 40px; width: 158px; }
+
+#_EditVoiceTalk span { display: inline-block; }
+
+#_EditVoiceTalk .frameCenLeft { height: 110px; }
+
+#_EditVoiceTalk .frameCenMid { height: 110px; }
+
+#_EditVoiceTalk .frameCenRight { height: 110px; }
+
+.BtnLeft { height: 26px; width: 3px; background: url("../images/public/button/left.gif") left center no-repeat; float: left; }
+
+.BtnMid { height: 26px; width: 60px; cursor: pointer; background: url("../images/public/button/mid.gif") center center repeat-x; text-align: center; float: left; }
+
+.BtnMid label { display: inline-block; margin-top: 7px; }
+
+.BtnRight { height: 26px; width: 3px; background: url("../images/public/button/right.gif") right center no-repeat; float: left; }
+
+.presetunset { color: gray; }

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="zyj.biyesheji0425.mapper.HistoryMapper" >
+  <resultMap id="BaseResultMap" type="zyj.biyesheji0425.pojo.History" >
+    <id column="person_id" property="personId" jdbcType="VARCHAR" />
+    <id column="date" property="date" jdbcType="TIMESTAMP" />
+    <result column="person_x" property="personX" jdbcType="REAL" />
+    <result column="person_y" property="personY" jdbcType="REAL" />
+    <result column="room_id" property="roomId" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    person_id, date, person_x, person_y,room_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="zyj.biyesheji0425.pojo.HistoryKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from history
+    where person_id = #{personId,jdbcType=VARCHAR}
+      and date = #{date,jdbcType=TIMESTAMP}
+  </select>
+  <select id="selectAllHistory" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from history
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="zyj.biyesheji0425.pojo.HistoryKey" >
+    delete from history
+    where person_id = #{personId,jdbcType=VARCHAR}
+      and date = #{date,jdbcType=TIMESTAMP}
+  </delete>
+  <insert id="insert" parameterType="zyj.biyesheji0425.pojo.History" >
+    insert into history (person_id, date, person_x, 
+      person_y,room_id)
+    values (#{personId,jdbcType=VARCHAR}, #{date,jdbcType=TIMESTAMP}, #{personX,jdbcType=REAL}, 
+      #{personY,jdbcType=REAL},#{roomId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="zyj.biyesheji0425.pojo.History" >
+    insert into history
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="personId != null" >
+        person_id,
+      </if>
+      <if test="date != null" >
+        date,
+      </if>
+      <if test="personX != null" >
+        person_x,
+      </if>
+      <if test="personY != null" >
+        person_y,
+      </if>
+      <if test="roomId != null" >
+        room_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="personId != null" >
+        #{personId,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null" >
+        #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="personX != null" >
+        #{personX,jdbcType=REAL},
+      </if>
+      <if test="personY != null" >
+        #{personY,jdbcType=REAL},
+      </if>
+      <if test="roomId != null" >
+        #{roomId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="zyj.biyesheji0425.pojo.History" >
+    update history
+    <set >
+      <if test="personX != null" >
+        person_x = #{personX,jdbcType=REAL},
+      </if>
+      <if test="personY != null" >
+        person_y = #{personY,jdbcType=REAL},
+      </if>
+      <if test="personY != null" >
+        room_id = #{roomId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where person_id = #{personId,jdbcType=VARCHAR}
+      and date = #{date,jdbcType=TIMESTAMP}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="zyj.biyesheji0425.pojo.History" >
+    update history
+    set person_x = #{personX,jdbcType=REAL},
+      person_y = #{personY,jdbcType=REAL}
+    where person_id = #{personId,jdbcType=VARCHAR}
+      and date = #{date,jdbcType=TIMESTAMP}
+  </update>
+</mapper>
